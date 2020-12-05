@@ -1,4 +1,6 @@
 import React from "react";
+import "./Style.css";
+import { RotateSpinner } from "react-spinners-kit";
 const ImageDisplay = (props) => {
   if (props.image) {
     return (
@@ -7,7 +9,11 @@ const ImageDisplay = (props) => {
       </div>
     );
   } else {
-    return <div>Loading.........</div>;
+    return (
+      <div className="loader">
+        <RotateSpinner size={50} color="#ff8a65" loading={true} />
+      </div>
+    );
   }
 };
 export default ImageDisplay;
