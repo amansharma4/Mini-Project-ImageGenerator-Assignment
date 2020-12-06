@@ -1,5 +1,5 @@
 import React from "react";
-import "./Style.css";
+import "../css/App.css";
 import { RotateSpinner } from "react-spinners-kit";
 const ImageDisplay = (props) => {
   const { image } = props;
