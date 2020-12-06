@@ -6,17 +6,15 @@ function App() {
   const getImage = () => {
     fetch("https://picsum.photos/200/300").then((data) => {
       const { url } = data;
-      url.length > 0 ? setImage(url) : setImage("Image not found");
+      setImage(url);
       // console.log(data);
     });
   };
   return (
     <div className="App">
       <ImageDisplay image={image} />
-
       <button onClick={getImage}>Get New Image</button>
     </div>
   );
 }
-
 export default App;

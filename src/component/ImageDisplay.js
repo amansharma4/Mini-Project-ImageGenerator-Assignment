@@ -2,10 +2,11 @@ import React from "react";
 import "./Style.css";
 import { RotateSpinner } from "react-spinners-kit";
 const ImageDisplay = (props) => {
-  if (props.image) {
+  const { image } = props;
+  if (image) {
     return (
       <div>
-        <img src={props.image} alt="disp" />
+        <img src={image} alt="disp" />
       </div>
     );
   } else {
