@@ -1,11 +1,12 @@
 import "./css/App.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ImageDisplay from "./component/ImageDisplay";
 function App() {
   const [image, setImage] = useState("");
   // const [loading, setLoading] = useState(false);
   const getImage = () => {
     try {
+      setImage("")
       fetch("https://picsum.photos/200/300").then((data) => {
         const { url } = data;
         setImage(url);
@@ -16,9 +17,9 @@ function App() {
       console.log(e);
     }
   };
-  useEffect(() => {
-    getImage();
-  }, []);
+  // useEffect(() => {
+  //   getImage();
+  // }, []);
   return (
     <div className="App">
       <ImageDisplay image={image} />
