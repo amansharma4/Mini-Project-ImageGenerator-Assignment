@@ -11,7 +11,6 @@ const ImageDisplay = ({ image }) => {
       <RotateSpinner size={50} color="#ff8a65" loading={true} />
     </div>
   );
-
   return img;
 };
 export default ImageDisplay;
