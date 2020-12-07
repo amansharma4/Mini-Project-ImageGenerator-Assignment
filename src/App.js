@@ -22,7 +22,9 @@ function App() {
   return (
     <div className="App">
       <ImageDisplay image={image} />
-      <button onClick={getImage}>Get New Image</button>
+      <button onClick={getImage} className="custom-file-input">
+        {" "}
+      </button>
     </div>
   );
 }
