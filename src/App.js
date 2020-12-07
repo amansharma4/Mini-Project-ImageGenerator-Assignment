@@ -1,5 +1,5 @@
 import "./css/App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImageDisplay from "./component/ImageDisplay";
 function App() {
   const [image, setImage] = useState("");
@@ -17,9 +17,9 @@ function App() {
       console.log(e);
     }
   };
-  // useEffect(() => {
-  //   getImage();
-  // }, []);
+  useEffect(() => {
+    getImage();
+  }, []);
   return (
     <div className="App">
       <ImageDisplay image={image} />
